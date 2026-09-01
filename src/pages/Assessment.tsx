@@ -10,6 +10,7 @@ import {
   AssessmentSubmissionResult,
   DomainScore,
 } from '@/features/assessment/assessmentTypes';
+import { saveAssessmentResult } from '@/utils/assessmentStorage';
 
 export const Assessment: React.FC = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -90,6 +91,7 @@ export const Assessment: React.FC = () => {
       completedAt: new Date().toISOString(),
     };
 
+    saveAssessmentResult(result);
     setSubmissionResult(result);
     setIsSubmitted(true);
   };
