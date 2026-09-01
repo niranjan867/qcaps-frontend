@@ -1,6 +1,7 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 import { AppShell } from '@/components/layout/AppShell';
 import { Dashboard } from '@/pages/Dashboard';
+import { Assessment } from '@/pages/Assessment';
 import { Card } from '@/components/ui/Card';
 
 export const router = createBrowserRouter([
@@ -18,16 +19,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'assessment',
-        element: (
-          <Card variant="glass" padding="large">
-            <h2 style={{ fontSize: '24px', fontWeight: 600, color: 'var(--color-text-primary)', marginBottom: '8px' }}>
-              Diagnostic Assessment
-            </h2>
-            <p style={{ fontSize: '15px', color: 'var(--color-text-secondary)', lineHeight: 1.5 }}>
-              Diagnostic evaluation suite. Implementation scheduled for subsequent phase.
-            </p>
-          </Card>
-        ),
+        element: <Assessment />,
       },
       {
         path: 'skills',
