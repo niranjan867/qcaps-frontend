@@ -3,6 +3,7 @@ import { AppShell } from '@/components/layout/AppShell';
 import { Dashboard } from '@/pages/Dashboard';
 import { Assessment } from '@/pages/Assessment';
 import { Skills } from '@/pages/Skills';
+import { Learning } from '@/pages/Learning';
 import { Card } from '@/components/ui/Card';
 
 export const router = createBrowserRouter([
@@ -28,16 +29,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'learning',
-        element: (
-          <Card variant="glass" padding="large">
-            <h2 style={{ fontSize: '24px', fontWeight: 600, color: 'var(--color-text-primary)', marginBottom: '8px' }}>
-              My Learning Catalog
-            </h2>
-            <p style={{ fontSize: '15px', color: 'var(--color-text-secondary)', lineHeight: 1.5 }}>
-              Tiered PQC curriculum. Implementation scheduled for subsequent phase.
-            </p>
-          </Card>
-        ),
+        element: <Learning />,
       },
       {
         path: 'challenges',
